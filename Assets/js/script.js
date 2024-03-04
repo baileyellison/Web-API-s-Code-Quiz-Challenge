@@ -1,12 +1,17 @@
 // Get all Elements
 const startBtn = document.querySelector (".startBtn button");
-const quizBox = document.querySelector (".quizBox");
-const Exit = quizBox.querySelector (".buttons .Exit");
-const Restart = quizBox.querySelector (".buttons .Restart");
+const infoCard = document.querySelector (".quizBox");
+const Exit = infoCard.querySelector (".buttons .Exit");
+const Restart = infoCard.querySelector (".buttons .Restart");
 
-// Starting Quiz If Statements
-startBtn.oneclick = () {
-    quizBox.classList.add("");
+// Starting Button
+startBtn.oneclick = ()=>{
+    infoCard.classList.add("activeInfo");
+}
+
+// Exit Butotn
+Exit.oneclick = ()=>{
+    infoCard.classList.remove("activeInfo");
 }
 
 

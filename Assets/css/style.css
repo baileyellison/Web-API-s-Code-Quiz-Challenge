@@ -9,7 +9,7 @@ left: 50%;
 transform: translate(-50%, -50%);
 }
 
-.Info-Card {
+.infoCard {
 position: absolute;
 top: 50%;
 left: 50%;
@@ -30,10 +30,11 @@ transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
  } 
 
- .quizBox.activeInfo {
-    opacity: 0;
-     pointer-events: none;
-     transform: translate(-50%, -50%);
+ .infoCard .activeInfo {
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
  }
 
 /* Start Button Styling */
@@ -61,6 +62,9 @@ transform: translate(-50%, -50%);
     background-color: white;
     border: solid 5px skyblue;
     border-radius: 10px;
+    /* opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) */
 }
 
 .Info-Card .Info-title {
