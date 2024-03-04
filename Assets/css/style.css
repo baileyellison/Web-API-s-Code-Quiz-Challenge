@@ -1,0 +1,104 @@
+body {
+    background-color: navy;
+}
+
+.start-btn {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.Info-Card {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+/* Start Button Styling */
+.start-btn button{
+    font-size: 32px;
+    font-weight: 500;
+    padding: 10px;
+    background-color: skyblue;
+    border: solid 2px white;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.start-btn button:hover {
+    background-color: navy;
+    color: white;
+    border: solid 2px skyblue
+}
+
+/* Info Card Styling */
+.Info-Card {
+    display: none;
+    width: 600px;
+    background-color: white;
+    border: solid 5px skyblue;
+    border-radius: 10px;
+}
+
+.Info-Card .Info-title {
+    height: 60px;
+    background-color: aliceblue;
+    border-bottom: solid 1px skyblue;
+    display: flex;
+    align-items: center;
+    padding: 0 265px;
+    margin: 0 0 10px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 32px;
+    font-weight: 600;
+    color: navy;
+}
+
+
+.Info-Card .Rules-list {
+    padding: 15px 15px 0 35px;
+    margin-bottom: 20px;
+}
+
+.Info-Card .Rules-list .Rules {
+    margin: 10px 0;
+    font-size: 18 px;
+    color:navy
+}
+
+/* Button Styling */
+.Info-Card .buttons {
+    height: 60px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    background-color: aliceblue;
+    border-top: 1px solid skyblue;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.Info-Card .buttons button {
+    margin: 20px 20px;
+    height: 40px;
+    width: 200px;
+    border: 1px solid navy;
+    border-radius: 10px;
+    background-color: skyblue;
+    color: navy;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.Info-Card .buttons button:hover {
+    background-color: navy;
+    color: white;
+    border: 1px solid skyblue;
+}
+
