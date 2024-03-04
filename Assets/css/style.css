@@ -121,7 +121,7 @@ transform: translate(-50%, -50%);
     position:relative;
     z-index: 99;
     background-color: aliceblue;
-    border-bottom: 1px solid skyblue;
+    border-bottom: 1px solid navy;
     height: 60px;
     display: flex;
     align-items: center;
@@ -200,3 +200,44 @@ section .answers-list .option:hover {
 }
 
 /* Quiz Box footer styling */
+.quiz-box footer {
+    height: 60px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color: aliceblue;
+    border-top: 1px solid navy;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.quiz-box footer .Question-Count span {
+    display: flex;
+    user-select: none;
+}
+
+footer .Question-Count span p {
+    font-weight: 500;
+    width: 20px;
+    padding: 0 5px;
+}
+
+footer .next-btn {
+    margin: 20px 20px;
+    height: 40px;
+    width: 200px;
+    border: 1px solid navy;
+    border-radius: 10px;
+    background-color: skyblue;
+    color: navy;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+footer .next-btn:hover {
+    background-color: navy;
+    color: white;
+    border: 1px solid skyblue;
+}
