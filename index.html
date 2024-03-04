@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./Assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>Web API's Coding Quiz</title>
 </head>
+
 <body>
     <main>
         <!-- Start Quiz Button -->
@@ -22,7 +24,8 @@
             <div class="Rules-list">
                 <div class="Rules">1. Click the start button to begin!</div>
                 <div class="Rules">2. You will be given 60 seconds to answer 5 questions.</div>
-                <div class="Rules">3. If you answer a question incorrectly 10 seconds will be deducted from the clock.</div>
+                <div class="Rules">3. If you answer a question incorrectly 10 seconds will be deducted from the clock.
+                </div>
                 <div class="Rules">4. Input your initials at the end to save your score!</div>
             </div>
             <!-- Resume and Exit -->
@@ -33,12 +36,50 @@
         </div>
     </main>
     <!-- Quiz Questions -->
-    <div class="Quiz-Questions-Box">
-        <div class="title">Coding Quiz Game</div>
-        <div class="timer">
-            <div class="time_text">Time Remaining: </div>
-            <div class="time-seconds">60</div>
-        </div>
+    <div class="quiz-box">
+        <header>
+            <div class="title">Coding Quiz Game</div>
+            <div class="timer">
+                <div class="time_text">Time Remaining: </div>
+                <div class="time-seconds">60</div>
+            </div>
+        </header>
+        <section>
+            <div class="context">
+                <span>What does CSS stand for?</span>
+            </div>
+            <div class="answers-list">
+                <div class="option">
+                    <span>Cascading Style Serices</span>
+                    <span id="Wrong" class="material-symbols-outlined">
+                        cancel
+                    </span>
+                </div>
+                <div class="option">
+                    <span>Color Style Sheets</span>
+                    <span id="Wrong" class="material-symbols-outlined">
+                        cancel
+                    </span>
+                </div>
+                <div class="option">
+                    <span>Cascading Style Sheets</span>
+                    <span id="Correct" class="material-symbols-outlined">
+                        check
+                    </span>
+                </div>
+                <div class="option">
+                    <span>Courtesy Style Selector</span>
+                    <span id="Wrong" class="material-symbols-outlined">
+                        cancel
+                    </span>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="Answer-Count">
+                <span><p>2</p><p>of</p><p>5</p>Questions/<span>
+            </div>
+            <button class="next-btn">Next</button>
+        </footer>
     </div>
 </body>
-
