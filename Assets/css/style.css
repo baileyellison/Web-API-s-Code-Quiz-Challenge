@@ -222,12 +222,12 @@ section .answers-list .option:hover {
     border-bottom-right-radius: 10px;
 }
 
-.quizBox footer .Question-Count span {
+.quizBox footer .questionCount span {
     display: flex;
     user-select: none;
 }
 
-footer .Question-Count span p {
+footer .questionCount span p {
     font-weight: 500;
     width: 20px;
     padding: 0 5px;

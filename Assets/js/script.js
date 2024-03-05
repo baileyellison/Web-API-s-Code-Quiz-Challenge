@@ -19,8 +19,17 @@ Exit_btn.onclick = ()=>{
 Continue.onclick = ()=>{
     infoCard.classList.remove("activeInfo");
     quizBox.classList.add("activeQuiz");
+    showQuestions();
 }
 
+let questionCount = 0;
+
+// Question functions
+function showQuestions() {
+    const context = document.querySelector(".context");
+    let queTag = '<span>'+ questions[2].question +'</span>';
+    context.innerHTML = queTag;
+}
 
 
 
