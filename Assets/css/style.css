@@ -2,36 +2,32 @@ body {
     background-color: navy;
 }
 
-.start-btn {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-}
-
-.Info-Card {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-}
-
-.quiz-box {
+.startBtn {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
- }   
+}
 
- .Score-box {
+.infoCard,
+.quizBox,
+.scoreBox {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
- }   
+}
+
+.infoCard.activeInfo,
+.quizBox.activeQuiz {
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
 
 /* Start Button Styling */
-.start-btn button{
+.startBtn button {
     font-size: 32px;
     font-weight: 500;
     padding: 10px;
@@ -42,22 +38,24 @@ transform: translate(-50%, -50%);
     cursor: pointer;
 }
 
-.start-btn button:hover {
+.startBtn button:hover {
     background-color: navy;
     color: white;
     border: solid 2px skyblue
 }
 
 /* Info Card Styling */
-.Info-Card {
-    display: none;
+.infoCard {
     width: 600px;
     background-color: white;
     border: solid 5px skyblue;
     border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(.9);
 }
 
-.Info-Card .Info-title {
+.infoCard .Info-title {
     height: 60px;
     background-color: aliceblue;
     border-bottom: solid 1px skyblue;
@@ -73,21 +71,21 @@ transform: translate(-50%, -50%);
 }
 
 
-.Info-Card .Rules-list {
+.infoCard .Rules-list {
     padding: 15px 15px 0 35px;
     margin-bottom: 20px;
 }
 
-.Info-Card .Rules-list .Rules {
+.infoCard .Rules-list .Rules {
     margin: 10px 0;
     font-size: 18 px;
-    color:navy
+    color: navy
 }
 
 /* Button Styling */
-.Info-Card .buttons {
+.infoCard .buttons {
     height: 60px;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 50px;
@@ -97,10 +95,11 @@ transform: translate(-50%, -50%);
     border-bottom-right-radius: 10px;
 }
 
-.Info-Card .buttons button {
+.infoCard .buttons button {
     margin: 20px 20px;
     height: 40px;
     width: 200px;
+    outline: none;
     border: 1px solid navy;
     border-radius: 10px;
     background-color: skyblue;
@@ -110,25 +109,25 @@ transform: translate(-50%, -50%);
     cursor: pointer;
 }
 
-.Info-Card .buttons button:hover {
+.infoCard .buttons button:hover {
     background-color: navy;
     color: white;
     border: 1px solid skyblue;
 }
 
 /* Quiz Question Box Styling */
-.quiz-box {
+.quizBox {
     width: 600px;
     background-color: white;
     border-radius: 10px;
     border: 5px solid skyblue;
-     opacity: 0;
-     pointer-events: none;
-     transform: translate(-50%, -50%);
-
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
 }
-.quiz-box header {
-    position:relative;
+
+.quizBox header {
+    position: relative;
     z-index: 99;
     background-color: aliceblue;
     border-bottom: 1px solid navy;
@@ -142,12 +141,12 @@ transform: translate(-50%, -50%);
     color: navy;
 }
 
-.quiz-box header .title {
+.quizBox header .title {
     font-size: 24px;
     font-weight: 600;
 }
 
-.quiz-box header .timer {
+.quizBox header .timer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -157,25 +156,25 @@ transform: translate(-50%, -50%);
 }
 
 /* Answers Styling */
-.quiz-box section {
+.quizBox section {
     padding: 25px 30px 20px 30px;
     font-size: 18px;
-    color:navy;
+    color: navy;
     background-color: skyblue;
 }
 
-.quiz-box section .context {
+.quizBox section .context {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
 }
 
-.quiz-box section .answers-list {
+.quizBox section .answersList {
     padding: 20px 0;
-    display:block;
+    display: block;
 }
 
-section .answers-list .option {
+section .answersList .option {
     background: aliceblue;
     border: 1px solid navy;
     border-radius: 5px;
@@ -187,32 +186,33 @@ section .answers-list .option {
     cursor: pointer;
 }
 
-section .answers-list .option:hover {
+section .answersList .option:hover {
     background-color: navy;
     color: white;
     border: 1px solid white;
 }
 
-.answers-list .option .material-symbols-outlined {
+.answersList .option .material-symbols-outlined {
     height: 24px;
     width: 24px;
     border-radius: 50%;
     font-size: 24px;
     line-height: 24px;
 }
-.answers-list .option #Wrong {
-    color:red
+
+.answersList .option #Wrong {
+    color: red
 }
 
-.answers-list .option #Correct {
+.answersList .option #Correct {
     color: forestgreen;
     background-color: greenyellow;
 }
 
 /* Quiz Box footer styling */
-.quiz-box footer {
+.quizBox footer {
     height: 60px;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
@@ -222,18 +222,18 @@ section .answers-list .option:hover {
     border-bottom-right-radius: 10px;
 }
 
-.quiz-box footer .Question-Count span {
+.quizBox footer .questionCount span {
     display: flex;
     user-select: none;
 }
 
-footer .Question-Count span p {
+footer .questionCount span p {
     font-weight: 500;
     width: 20px;
     padding: 0 5px;
 }
 
-footer .next-btn {
+footer .nextBtn {
     margin: 20px 20px;
     height: 40px;
     width: 200px;
@@ -246,14 +246,14 @@ footer .next-btn {
     cursor: pointer;
 }
 
-footer .next-btn:hover {
+footer .nextBtn:hover {
     background-color: navy;
     color: white;
     border: 1px solid skyblue;
 }
 
 /* Score Box */
-.Score-box {
+.scoreBox {
     width: 600px;
     padding: 25px 30px;
     background: white;
@@ -269,7 +269,7 @@ footer .next-btn:hover {
     transform: translate(-50%, -50%);
 }
 
-.Score-box .material-symbols-outlined {
+.scoreBox .material-symbols-outlined {
     font-size: 75px;
     margin: 20px;
     color: gold;
@@ -282,36 +282,37 @@ footer .next-btn:hover {
     margin: 0 0 15px 0;
 }
 
-.Score-box .final-score span {
-    display:flex;
-    margin 10px 0;
+.scoreBox .finalScore span {
+    display: flex;
+    margin: 10px 0;
     font-size: 20px;
-    color: Navy; 
+    color: Navy;
 }
 
-.Score-box .final-score span p {
+.scoreBox .finalScore span p {
     padding: 0 5px;
 }
 
 /* Initals Saving */
-.Score-box .input p {
+.scoreBox .input p {
     display: flex;
     justify-content: center;
     font-size: 18px;
     color: navy
 }
-.Score-box .input input {
+
+.scoreBox .input #form {
     font-size: 18px;
     border: 1px solid navy;
     border-radius: 5px;
 }
 
-.Score-box .input input:hover {
+.scoreBox .input input:hover {
     border: 1px solid skyblue;
 }
 
-.Score-box .input button {
-    margin:0 10px 30px 10px;
+.scoreBox .input button {
+    margin: 0 10px 30px 10px;
     height: 40px;
     padding: 0 20px;
     background-color: navy;
@@ -322,19 +323,20 @@ footer .next-btn:hover {
     font-weight: 600;
     cursor: pointer;
 }
-.Score-box .input button:hover {
+
+.scoreBox .input button:hover {
     background-color: skyblue;
     color: navy;
     border: 1px solid navy;
 }
 
 /* Score box buttons Stlying */
-.Score-box .buttons {
+.scoreBox .buttons {
     display: flex;
     margin: 20px 0;
 }
 
-.Score-box .buttons button {
+.scoreBox .buttons button {
     margin: 0 10px;
     height: 40px;
     padding: 0 20px;
@@ -347,7 +349,7 @@ footer .next-btn:hover {
     cursor: pointer;
 }
 
-.Score-box .buttons button:hover {
+.scoreBox .buttons button:hover {
     background-color: navy;
     color: white;
     border: 1px solid skyblue;

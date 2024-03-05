@@ -13,11 +13,11 @@
 <body>
     <main>
         <!-- Start Quiz Button -->
-        <div class="start-btn">
+        <div class="startBtn">
             <button>Start Quiz</button>
         </div>
         <!-- Information Card -->
-        <div class="Info-Card">
+        <div class="infoCard">
             <div class="Info-title">
                 <span>Rules</span>
             </div>
@@ -30,13 +30,13 @@
             </div>
             <!-- Resume and Exit -->
             <div class="buttons">
-                <button class="exit">Exit</button>
-                <button class="restart">Resume</button>
+                <button class="Exit">Exit</button>
+                <button class="Continue">Start</button>
             </div>
         </div>
     </main>
     <!-- Quiz Questions -->
-    <div class="quiz-box">
+    <div class="quizBox">
         <header>
             <div class="title">Coding Quiz Game</div>
             <div class="timer">
@@ -46,10 +46,10 @@
         </header>
         <section>
             <div class="context">
-                <span>What does CSS stand for?</span>
+                <!-- <span>What does CSS stand for?</span> -->
             </div>
-            <div class="answers-list">
-                <div class="option">
+            <div class="answersList">
+                <!-- <div class="option">
                     <span>Cascading Style Serices</span>
                     <span id="Wrong" class="material-symbols-outlined">
                         cancel
@@ -68,47 +68,51 @@
                     </span>
                 </div>
                 <div class="option">
-                    <span>Courtesy Style Selector</span>
+                    <span>Custom Style Selector</span>
                     <span id="Wrong" class="material-symbols-outlined">
                         cancel
-                    </span>
-                </div>
+                    </span> -->
             </div>
-        </section>
-        <footer>
-            <div class="Question-Count">
-                <span>
-                    <p><b>2</b></p>
-                    <p>of</p>
-                    <p><b>5</b></p>
-                    <p>Questions</p><span>
-            </div>
-            <button class="next-btn">Next</button>
-        </footer>
+            <footer>
+                <div class="questionCount">
+                    <!-- <span>
+                        <p><b>2</b></p>
+                        <p>of</p>
+                        <p><b>5</b></p>
+                        <p>Questions</p><span>
+                </div> -->
+                <button class="nextBtn">Next</button>
+            </footer>
+    </div>
+    </section>
     </div>
     <!-- Score Keeping box -->
-    <div class="Score-box">
+    <div class="scoreBox">
         <span class="material-symbols-outlined">
             family_star
         </span>
         <div class="finish">Awesome, you've completed the Coding Quiz! Enter your initials to save your score!</div>
-        <div class="final-score">
-            <span><p>You got</p><p><b>2</b></p>
+        <div class="finalScore">
+            <!-- <span>
+                <p>You got</p>
+                <p><b>2</b></p>
                 <p>out of</p>
                 <p><b>5</b></p>
                 <p>Correct</p>
-            </span>
+            </span> -->
         </div>
         <div class="input">
             <p>Enter Initials:</p>
-            <input type="text">
+            <input id="form" type="text">
             <button class="Save">Save your score!</button>
         </div>
         <div class="buttons">
             <button class="Restart">Restart</button>
-            <button class="Exit">Exit Quiz</button>
+            <button class="Exit">Exit</button>
         </div>
     </div>
-    <script src="./Assets/js/script.js"></script>
+    <script id="JavaScript" src="./Assets/js/script.js"></script>
+    <script id="Questions" src="./Assets/js/questions.js"></script>
 </body>
+
 </html>
