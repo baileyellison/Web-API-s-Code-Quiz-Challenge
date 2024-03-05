@@ -169,12 +169,12 @@ body {
     text-align: center;
 }
 
-.quizBox section .answers-list {
+.quizBox section .answersList {
     padding: 20px 0;
     display: block;
 }
 
-section .answers-list .option {
+section .answersList .option {
     background: aliceblue;
     border: 1px solid navy;
     border-radius: 5px;
@@ -186,13 +186,13 @@ section .answers-list .option {
     cursor: pointer;
 }
 
-section .answers-list .option:hover {
+section .answersList .option:hover {
     background-color: navy;
     color: white;
     border: 1px solid white;
 }
 
-.answers-list .option .material-symbols-outlined {
+.answersList .option .material-symbols-outlined {
     height: 24px;
     width: 24px;
     border-radius: 50%;
@@ -200,11 +200,11 @@ section .answers-list .option:hover {
     line-height: 24px;
 }
 
-.answers-list .option #Wrong {
+.answersList .option #Wrong {
     color: red
 }
 
-.answers-list .option #Correct {
+.answersList .option #Correct {
     color: forestgreen;
     background-color: greenyellow;
 }
@@ -233,7 +233,7 @@ footer .questionCount span p {
     padding: 0 5px;
 }
 
-footer .next-btn {
+footer .nextBtn {
     margin: 20px 20px;
     height: 40px;
     width: 200px;
@@ -246,7 +246,7 @@ footer .next-btn {
     cursor: pointer;
 }
 
-footer .next-btn:hover {
+footer .nextBtn:hover {
     background-color: navy;
     color: white;
     border: 1px solid skyblue;
@@ -282,14 +282,14 @@ footer .next-btn:hover {
     margin: 0 0 15px 0;
 }
 
-.scoreBox .final-score span {
+.scoreBox .finalScore span {
     display: flex;
     margin: 10px 0;
     font-size: 20px;
     color: Navy;
 }
 
-.scoreBox .final-score span p {
+.scoreBox .finalScore span p {
     padding: 0 5px;
 }
 

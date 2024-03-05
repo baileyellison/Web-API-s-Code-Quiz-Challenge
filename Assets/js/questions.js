@@ -35,7 +35,7 @@ let questions = [
     },
     {
         num: 4,
-        question: "What does the <a> tag stand for in HTML?",
+        question: "What does the < a > tag stand for in HTML?",
         answer: "anchor",
         options: [
             "pictures",
