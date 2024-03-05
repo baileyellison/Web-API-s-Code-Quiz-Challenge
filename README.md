@@ -13,7 +13,8 @@ The application uses prompted buttons to allow the user to navigate the question
 Screenshot of Deployed Application:
 <a href=Assets/DeployedApplication.png>
 
-Deployed Link
+Deployed Link:
+
 
 ## Credits
 
