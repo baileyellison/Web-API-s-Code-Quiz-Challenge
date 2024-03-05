@@ -14,7 +14,7 @@ Screenshot of Deployed Application:
 <a link=Assets/DeployedApplication.png>
 
 
-Deployed Link:
+Deployed Link: https://baileyellison.github.io/Web-API-s-Code-Quiz-Challenge/
 
 
 ## Credits
